@@ -1,4 +1,5 @@
 //import logo from './logo.svg';
+import { Playlist } from '../Playlist/Playlist.js';
 import { SearchBar } from '../SearchBar/SearchBar.js';
 import { SearchResults } from '../SearchResults/SearchResults.js';
 import './App.css';
@@ -11,7 +12,7 @@ function App() {
         <SearchBar />
         <div className="App-playlist">
           <SearchResults />
-          Add a Playlist component 
+          <Playlist /> 
         </div>
       </div>
     </div>
