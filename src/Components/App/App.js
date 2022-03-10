@@ -21,7 +21,9 @@ class App extends React.Component {
         {name: 'plName6', artist: 'plArtist6', album: 'plAlbum6', id: 6}
       ]
     };
+
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
   }
 
   addTrack(track) {
@@ -31,6 +33,17 @@ class App extends React.Component {
     } else {
       plTracks.push(track);
       this.setState({plTracks});
+    };
+  }
+
+  removeTrack(track) {
+    let plTracks = this.state.playlistTracks;
+    if(plTracks.find(plTrack => plTrack.id === track.id)) {
+      let index = plTracks.indexOf(track);
+      plTracks.splice(index,1);
+      this.setState({plTracks});
+    } else {
+      return;
     };
   }
 
@@ -44,7 +57,8 @@ class App extends React.Component {
             <SearchResults searchResults={this.state.searchResults} 
                            onAdd={this.addTrack}/>
             <Playlist playlistTracks={this.state.playlistTracks} 
-                      playlistName={this.state.playlistName}/> 
+                      playlistName={this.state.playlistName}
+                      onRemove={this.removeTrack} /> 
           </div>
         </div>
       </div>
