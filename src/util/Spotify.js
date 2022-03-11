@@ -89,12 +89,6 @@ export const Spotify = {
                 headers: headers,
                 body: JSON.stringify({URIs: trackUriArr})
               }
-            ).then(
-              response => response.json()
-            ).then(
-              jsonResponse => {
-                const playlistID = jsonResponse.id;
-              }
             );
           }
         );
