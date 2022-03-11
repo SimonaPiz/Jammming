@@ -2,7 +2,7 @@ let accessToken;
 const clientId = '886fa341ef8d4583ac685605960aa9a4';
 const redURI = 'http://localhost:3000/';
 
-const Spotify = {
+export const Spotify = {
   getAccessToken() {
     if (accessToken) {
       return accessToken;
@@ -52,5 +52,3 @@ const Spotify = {
     );
   }
 };
-
-export default Spotify;
