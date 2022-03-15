@@ -39,7 +39,6 @@ const Spotify = {
         if(!jsonResponse.tracks) {
           return [];
         } else {
-          console.log('ci sono traccie');
           return jsonResponse.tracks.items.map(track => (
             {
               id: track.id,
@@ -66,30 +65,27 @@ const Spotify = {
       `https://api.spotify.com/v1/me`,
       {headers: headers}  
     ).then(
-      response => {
-        return response.json();
-      }
+      response => { return response.json();}
     ).then(
       jsonResponse => {
         userId = jsonResponse.id;
         return fetch(
-          `https://api.spotify.com/v1/users/${userId}/playlist`,
+          `https://api.spotify.com/v1/users/${userId}/playlists`,
           {
             method:'POST',
             headers: headers,
             body: JSON.stringify({name: plName})
           }
-        ).then(
-          response => response.json()
+        ).then( response => response.json()
         ).then(
           jsonResponse => {
-            const playlistID = jsonResponse.id;
+            const playlistId = jsonResponse.id;
             return fetch(
-              `/v1/users/${userId}/playlists/${playlistID}/tracks`,
+              `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
               {
                 method: 'POST',
                 headers: headers,
-                body: JSON.stringify({URIs: trackUriArr})
+                body: JSON.stringify({uris: trackUriArr})
               }
             );
           }
