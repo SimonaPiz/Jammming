@@ -1,6 +1,7 @@
 let accessToken;
 const clientId = '886fa341ef8d4583ac685605960aa9a4';
-const redURI = 'http://localhost:3000/';
+//const redURI = 'http://localhost:3000/';
+const redURI = 'http://Jammming_SimonaPiz.surge.sh/';
 
 const Spotify = {
   getAccessToken() {
