@@ -1,6 +1,6 @@
 
 # <img src="https://github.com/SimonaPiz/Jammming/assets/91121660/94bee78d-b59d-46f2-9809-397a976b0785" width="30px" alt="Jamming Icon"/> Jammming
-> A Playlist App with the Spotify API.
+> A Playlist App with the [Spotify API](https://open.spotify.com/) <img src="https://github.com/SimonaPiz/Jammming/assets/91121660/75033841-68fe-476a-8bff-33b1420916f4" width="16px" alt="Spotify Icon"/>.
 
 Live demo [http://Jammming_SimonaPiz.surge.sh/](http://Jammming_SimonaPiz.surge.sh/). <!-- If you have the project hosted somewhere, include the link here. -->
 
